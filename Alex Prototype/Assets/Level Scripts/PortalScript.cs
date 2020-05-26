@@ -6,7 +6,7 @@ using UnityEngine;
 public class PortalScript : MonoBehaviour
 {
     public int portalID;
-    public GameObject[] prefabs = new GameObject[3];
+    public GameObject[] prefabs = new GameObject[15];
     public LevelController controller;
     public bool isEndPoint;
     public InventoryController invc;
@@ -25,11 +25,12 @@ public class PortalScript : MonoBehaviour
     {
         if (controller.inventory[i] > 0)
         {
+
             //activate alter other with the inventory slot using the portal id
-            controller.alterother(portalID, controller.inventory[i]);
+            controller.alterother(portalID, i);
             //set inventory item to none
-            controller.inventory[i] = 0;
         }
+
     }
     public void generateItem(int item)
     {

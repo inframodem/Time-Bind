@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public enum PlayerType { Player1, Player2}
-    public enum LevelList { Level1,Level2,Level3,Level4}
+    public enum LevelList { Level1,Level2,Level3,Level4,Level5,Level6,Level7,Level8,Level9,Level10,Level11,Level12,Level13}
+
     public LevelList currLevel;
     public PlayerType playerType;
     public string key;
@@ -46,6 +47,11 @@ public class GameController : MonoBehaviour
             SceneManager.LoadScene("Player2Level1");
         }
         
+    }
+    public void LevelTransition()
+    {
+        currLevel++;
+        SceneManager.LoadScene(playerType.ToString() + currLevel.ToString());
     }
 
 }

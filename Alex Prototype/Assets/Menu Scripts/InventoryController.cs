@@ -36,17 +36,17 @@ public class InventoryController : MonoBehaviour
         if (currentportal != null && lc.inventory[i] != 0 && !currentportal.isEndPoint)
         {
             currentportal.SendItem(i);
-            updateslot(i, 0);
         }
     }
     //updates inventory slot picture to new image
     public void updateslot(int i, int item)
     {
+        Debug.Log("test2");
         switch (item)
         {
             case 0:
                 images[i].sprite = null;
-                images[i].color = Color.white;
+                images[i].color = new Vector4(1f,1f,1f,0f);
                 break;
             case 2:
                 images[i].sprite = itemsprites[1];
@@ -60,6 +60,18 @@ public class InventoryController : MonoBehaviour
 
             case 4:
                 images[i].sprite = itemsprites[1];
+                images[i].color = Color.yellow;
+                break;
+            case 7:
+                images[i].sprite = itemsprites[2];
+                images[i].color = Color.green;
+                break;
+            case 8:
+                images[i].sprite = itemsprites[2];
+                images[i].color = new Vector4(1f,0,1f,1f);
+                break;
+            case 9:
+                images[i].sprite = itemsprites[2];
                 images[i].color = Color.yellow;
                 break;
         }
