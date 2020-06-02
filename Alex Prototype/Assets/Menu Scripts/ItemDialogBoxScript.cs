@@ -61,9 +61,11 @@ public class ItemDialogBoxScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.name = "Player";
-        prompt.SetActive(true);
-        inTrigger = true;
+        if (collision.name == "Player")
+        {
+            prompt.SetActive(true);
+            inTrigger = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

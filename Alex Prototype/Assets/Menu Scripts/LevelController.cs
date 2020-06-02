@@ -18,7 +18,7 @@ public class LevelController : MonoBehaviour
     public InventoryController invc;
     public bool preventrepeat = false;
     public bool[] playerWin = new bool[2];
-    public int health = 5;
+    
     
     // Start is called before the first frame update
     //sets saved data as new data
@@ -75,7 +75,8 @@ public class LevelController : MonoBehaviour
             {
                 if (currsaves[(int)gc.playerType].getItem(1) == 1)
                 {
-                    
+                    gc.DeathTrigger();
+                    currsaves[(int)gc.playerType].setItem(1, 0);
                 }
                 else if (currsaves[(int)gc.playerType].getItem(2) == 1)
                 {
@@ -93,6 +94,7 @@ public class LevelController : MonoBehaviour
                     playerWin[who - 1] = true;
                     currsaves[(int)gc.playerType].setItem(2, 0);
                 }
+
                 else
                 {
                     //if any portal in portal list has an item value greater then 1 generate the item at the portal with the same id - 1
@@ -100,9 +102,18 @@ public class LevelController : MonoBehaviour
                     {
                         if (currsaves[(int)gc.playerType].getItem(i) > 1)
                         {
+
                             int item = currsaves[(int)gc.playerType].getItem(i);
                             PortalScript portal = portals[i - 3].GetComponent<PortalScript>();
                             portal.generateItem(currsaves[(int)gc.playerType].getItem(i) - 2);
+                            currsaves[(int)gc.playerType].setItem(i, 0);
+                        }
+                        else if (currsaves[(int)gc.playerType].getItem(i) == 1)
+                        {
+
+                            int item = currsaves[(int)gc.playerType].getItem(i);
+                            SwitchPortal portal = portals[i - 3].GetComponent<SwitchPortal>();
+                            portal.indieToggleSwitch();
                             currsaves[(int)gc.playerType].setItem(i, 0);
                         }
                     }
@@ -176,6 +187,7 @@ public class LevelController : MonoBehaviour
         {
             if(inventory[i] == item)
             {
+                inventory[i] = 0;
                 invc.updateslot(i, 0);
                 return true;
             }
@@ -198,6 +210,54 @@ public class LevelController : MonoBehaviour
                 who = 1;
                 break;
         }
+        SendSave(who, send);
+    }
+    public virtual void SendCrates(int portal,int cratetype)
+    {
+        playerWin[(int)gc.playerType] = true;
+        LevelData send = new LevelData();
+        send.setItem(0, 1);
+        send.setItem(portal + 3, cratetype);
+        int who = 2;
+        switch ((int)gc.playerType + 1)
+        {
+            case 1:
+                who = 2;
+                break;
+            case 2:
+                who = 1;
+                break;
+        }
+        SendSave(who, send);
+    }
+
+    public virtual void toggleswitch(int portal, bool mode)
+    {
+        //determine what the other player is
+        int who = 2;
+        switch ((int)gc.playerType + 1)
+        {
+            case 1:
+                who = 2;
+                break;
+            case 2:
+                who = 1;
+                break;
+        }
+        int tog = 0;
+        switch (mode)
+        {
+            case false:
+                tog = 0;
+                break;
+            case true:
+                tog = 1;
+                break;
+        }
+        //sets flag and updates item in portal slot
+        LevelData send = new LevelData();
+        send.setItem(0, 1);
+        send.setItem(portal + 3, tog);
         SendSave(who, send);
     }
 }

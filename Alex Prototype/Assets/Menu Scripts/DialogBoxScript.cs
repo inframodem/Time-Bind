@@ -12,6 +12,7 @@ public class DialogBoxScript : MonoBehaviour
     public Text instructText;
     public bool inTrigger;
     public int index = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -54,9 +55,11 @@ public class DialogBoxScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.name = "Player";
-        prompt.SetActive(true);
-        inTrigger = true;
+        if (collision.name == "Player")
+        {
+            prompt.SetActive(true);
+            inTrigger = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -66,4 +69,5 @@ public class DialogBoxScript : MonoBehaviour
         dialogBox.SetActive(false);
         index = 0;
     }
+
 }

@@ -44,10 +44,17 @@ public class PortalScript : MonoBehaviour
     //set if  its the player entering the portal
     public void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.name == "Player")
+        if (col.name == "Player" && !isEndPoint)
         {
             //set inventory controller's current portal to this portal
             invc.currentportal = this;
+        }
+        if (col.tag == "draggable" && !isEndPoint)
+        {
+            RockMovement boxS = col.GetComponent<RockMovement>();
+            //set inventory controller's current portal to this portal
+            controller.SendCrates(portalID, boxS.cratetype);
+            Destroy(col.gameObject);
         }
     }
     public void OnTriggerExit2D(Collider2D col)
@@ -57,6 +64,11 @@ public class PortalScript : MonoBehaviour
             //set inventory controllers current portal to null if exiting trigger
             invc.currentportal = null;
 
+        }
+        if (col.tag == "draggable" && !isEndPoint)
+        {
+            //set inventory controller's current portal to this portal
+            invc.currentportal = this;
         }
     }
 }

@@ -32,4 +32,40 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Player2 Scenes/Player2Level4.unity
     guid: dedf4cdd58168db42a0991869aecd79a
+  - enabled: 1
+    path: Assets/Player1 Scenes/Player1Level5.unity
+    guid: 2a144b05e8fc0494b8cfca0ea438f545
+  - enabled: 1
+    path: Assets/Player1 Scenes/Player1Level6.unity
+    guid: cb3e980a2d2404044908d4e74999ceaa
+  - enabled: 1
+    path: Assets/Player2 Scenes/Player2Level5.unity
+    guid: 9ac5ddd5dca623a469b2901965a25d21
+  - enabled: 1
+    path: Assets/Player2 Scenes/Player2Level6.unity
+    guid: efb673bcb48f2854e8892671fb5043de
+  - enabled: 1
+    path: Assets/Player1 Scenes/Player1Level7.unity
+    guid: 653558c3b7c3d874c93880f890704a50
+  - enabled: 1
+    path: Assets/Player1 Scenes/Player1Level8.unity
+    guid: ef53b5ec714aa9e48bf82aaedbca139b
+  - enabled: 1
+    path: Assets/Player1 Scenes/Player1Level9.unity
+    guid: 7171ad9129254ca4d80883d7631083ea
+  - enabled: 1
+    path: Assets/Player2 Scenes/Player2Level7.unity
+    guid: 73cf3814d4e1272488ea4a88ca95944d
+  - enabled: 1
+    path: Assets/Player2 Scenes/Player2Level8.unity
+    guid: 2cdfc3a784e45ac45a972c066b2ed878
+  - enabled: 1
+    path: Assets/Player2 Scenes/Player2Level9.unity
+    guid: 1de288e60b3361443abc47cc6064fa59
+  - enabled: 1
+    path: Assets/Player2 Scenes/Player2Scene10.unity
+    guid: 1a4b9e70cc5eacb4f9ce0420265b4d9b
+  - enabled: 1
+    path: Assets/Player1 Scenes/Player1Scene11.unity
+    guid: f43177af941b6d348a0ea65dda92d6a4
   m_configObjects: {}

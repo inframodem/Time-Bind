@@ -7,6 +7,7 @@ public class RockMovement : MonoBehaviour
     public float speed;
     public const float starSpeed = 0;
     public Vector2 direction;
+    public int cratetype = 10;
 
     void Start()
     {
