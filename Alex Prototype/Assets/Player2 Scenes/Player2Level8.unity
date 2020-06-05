@@ -39093,6 +39093,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 0
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &850028877
@@ -40648,6 +40649,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 1
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &1094191611
@@ -40730,6 +40732,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 1
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &1149742643
@@ -46849,6 +46852,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 1
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &1418708961
@@ -47036,7 +47040,7 @@ MonoBehaviour:
   - {fileID: 6378429127610931385, guid: e878bbe8964b59c4594e958cce00d466, type: 3}
   - {fileID: 6378429127610931385, guid: e878bbe8964b59c4594e958cce00d466, type: 3}
   controller: {fileID: 549402012}
-  isEndPoint: 1
+  isEndPoint: 0
   invc: {fileID: 368824663}
 --- !u!95 &1430300154
 Animator:
@@ -48116,6 +48120,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 0
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &1670840726
@@ -54694,6 +54699,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 0
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &2123812356

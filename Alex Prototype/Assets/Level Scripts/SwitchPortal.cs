@@ -14,7 +14,7 @@ public class SwitchPortal : MonoBehaviour
     public bool inTrigger = false;
     public bool isASwitch = false;
     public bool switchmode;
-  
+    public bool attached = true;
     public float cool = 2.5f;
     public float maxcool = 2.5f;
 
@@ -34,7 +34,10 @@ public class SwitchPortal : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("test2");
-                toggleswitch();
+                if (attached)
+                    toggleswitch();
+                else
+                    indieToggleSwitch();
                 cool = maxcool;
             }
             

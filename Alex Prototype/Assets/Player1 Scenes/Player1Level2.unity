@@ -3181,8 +3181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LookAt: {fileID: 768797777}
-  boundX: 2
-  boundY: 1.5
+  boundX: 1
+  boundY: 1
   speed: 0.15
 --- !u!81 &461078491
 AudioListener:
@@ -4427,6 +4427,7 @@ GameObject:
   - component: {fileID: 768797780}
   - component: {fileID: 768797779}
   - component: {fileID: 768797778}
+  - component: {fileID: 768797782}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4489,12 +4490,16 @@ MonoBehaviour:
   speed: 10
   direction: {x: 0, y: 0}
   charDirection: right
-  angle: 0
   key1: 0
-  Up: {fileID: 21300004, guid: 8281f8b4a0bb1d94e929cdd0121723df, type: 3}
-  Down: {fileID: 21300006, guid: 8281f8b4a0bb1d94e929cdd0121723df, type: 3}
-  Left: {fileID: 21300002, guid: 8281f8b4a0bb1d94e929cdd0121723df, type: 3}
-  Right: {fileID: 21300000, guid: 953777f829be82f4399eb2edc236b119, type: 3}
+  Up: {fileID: 21300000, guid: f25be69e08ce4f84cbeef10ed2241ee4, type: 3}
+  Down: {fileID: 21300000, guid: 3bc05a8b904132447bc9d46f2181d1cc, type: 3}
+  Left: {fileID: 21300000, guid: 03130483fc9d9614aad5ff2019e43f82, type: 3}
+  Right: {fileID: 21300000, guid: 674422485ae52ac4dbf1189862baf0d6, type: 3}
+  MoveUp: {fileID: 21300000, guid: f25be69e08ce4f84cbeef10ed2241ee4, type: 3}
+  MoveDown: {fileID: 0}
+  MoveLeft: {fileID: 0}
+  MoveRight: {fileID: 0}
+  an: {fileID: 0}
 --- !u!50 &768797780
 Rigidbody2D:
   serializedVersion: 4
@@ -4553,7 +4558,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 953777f829be82f4399eb2edc236b119, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 674422485ae52ac4dbf1189862baf0d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4564,6 +4569,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &768797782
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768797776}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0b68f2d0f2e32f743af159c1497658c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &780517444
 GameObject:
   m_ObjectHideFlags: 0
@@ -5169,7 +5193,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 38e1410ef9ecb1647acb98c33d610b9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

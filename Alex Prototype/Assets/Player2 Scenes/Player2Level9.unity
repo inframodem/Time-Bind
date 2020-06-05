@@ -11552,6 +11552,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 1
   switchmode: 0
+  attached: 0
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &460077980
@@ -22294,6 +22295,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 1
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &567232588
@@ -37738,6 +37740,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 0
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &696659404
@@ -38844,6 +38847,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 0
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &815984241
@@ -55792,6 +55796,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 1
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &1429106696
@@ -56216,6 +56221,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 1
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &1480542359
@@ -57000,6 +57006,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 1
   switchmode: 0
+  attached: 0
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &1647684170
@@ -57563,6 +57570,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 0
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &1811107423

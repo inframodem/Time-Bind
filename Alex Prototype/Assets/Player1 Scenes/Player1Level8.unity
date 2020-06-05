@@ -31978,7 +31978,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  lc: {fileID: 0}
+  lc: {fileID: 549402012}
   transfercooldown: 2.5
   transfercooldownmax: 2.5
   transferready: 0
@@ -37668,6 +37668,7 @@ GameObject:
   - component: {fileID: 581521309}
   - component: {fileID: 581521308}
   - component: {fileID: 581521307}
+  - component: {fileID: 581521312}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -37699,7 +37700,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.9}
+  m_Size: {x: 0.75, y: 0.85}
   m_EdgeRadius: 0
 --- !u!114 &581521308
 MonoBehaviour:
@@ -37716,12 +37717,16 @@ MonoBehaviour:
   speed: 10
   direction: {x: 0, y: 0}
   charDirection: right
-  angle: 0
   key1: 0
   Up: {fileID: 21300004, guid: 8281f8b4a0bb1d94e929cdd0121723df, type: 3}
   Down: {fileID: 21300006, guid: 8281f8b4a0bb1d94e929cdd0121723df, type: 3}
   Left: {fileID: 21300002, guid: 8281f8b4a0bb1d94e929cdd0121723df, type: 3}
   Right: {fileID: 21300000, guid: 953777f829be82f4399eb2edc236b119, type: 3}
+  MoveUp: {fileID: 0}
+  MoveDown: {fileID: 0}
+  MoveLeft: {fileID: 0}
+  MoveRight: {fileID: 0}
+  an: {fileID: 0}
 --- !u!50 &581521309
 Rigidbody2D:
   serializedVersion: 4
@@ -37780,7 +37785,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 953777f829be82f4399eb2edc236b119, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 674422485ae52ac4dbf1189862baf0d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -37805,6 +37810,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &581521312
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581521306}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0b68f2d0f2e32f743af159c1497658c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &584717140
 GameObject:
   m_ObjectHideFlags: 0
@@ -38964,6 +38988,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 0
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &850028877
@@ -40519,6 +40544,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 1
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &1094191611
@@ -40601,6 +40627,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 1
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &1149742643
@@ -46720,6 +46747,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 1
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &1418708961
@@ -48108,6 +48136,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 0
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &1670840726
@@ -53679,8 +53708,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LookAt: {fileID: 581521311}
-  boundX: 2
-  boundY: 1.5
+  boundX: 1
+  boundY: 1
   speed: 0.15
 --- !u!1 &1913652479
 GameObject:
@@ -54686,6 +54715,7 @@ MonoBehaviour:
   inTrigger: 0
   isASwitch: 0
   switchmode: 0
+  attached: 1
   cool: 2.5
   maxcool: 2.5
 --- !u!61 &2123812356
