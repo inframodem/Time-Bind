@@ -34,7 +34,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         waitTime = startWaitTime;
         destination = 1;
-        //gc = GameObject.Find("GameController").GetComponent<GameController>();
+        gc = GameObject.Find("GameController").GetComponent<GameController>();
         
 
         //fieldOfView.setViewDistance(viewDistance);
@@ -46,13 +46,16 @@ public class EnemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, target.position) < viewDistance)
+        if (target != null)
         {
-            chase();
-        }
-        else
-        {
-            patrol();
+            if (Vector2.Distance(transform.position, target.position) < viewDistance)
+            {
+                chase();
+            }
+            else
+            {
+                patrol();
+            }
         }
     }
 
@@ -74,6 +77,7 @@ public class EnemyBehavior : MonoBehaviour
     private void attack()
     {
          if (Time.time > lastAttackTime + attackDelay) {
+            GetComponent<AudioSource>().Play();
             gc.UpdateHealth(-1);
             lastAttackTime = Time.time;
          }

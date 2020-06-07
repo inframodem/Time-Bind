@@ -17,6 +17,7 @@ public class SwitchPortal : MonoBehaviour
     public bool attached = true;
     public float cool = 2.5f;
     public float maxcool = 2.5f;
+    public bool isaportal = true;
 
     // Start is called before the first frame update
     void Start()
@@ -68,7 +69,8 @@ public class SwitchPortal : MonoBehaviour
             doors[i].SetActive(!doors[i].activeSelf);
         }
         switchSprite.flipY = switchmode;
-        lc.toggleswitch(portal, true);
+        if(isaportal)
+            lc.toggleswitch(portal, true);
 
     }
     public void indieToggleSwitch()

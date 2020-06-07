@@ -35,8 +35,7 @@ public class Electrode : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            GameObject gc = GameObject.Find("GameController");
-            gc.GetComponent<GameController>().UpdateHealth(-1);
+
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         }
         if (collision.gameObject.tag == "obs")
@@ -44,5 +43,13 @@ public class Electrode : MonoBehaviour
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         }
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            GameObject gc = GameObject.Find("GameController");
+            gc.GetComponent<GameController>().UpdateHealth(-1);
+        }
     }
 }

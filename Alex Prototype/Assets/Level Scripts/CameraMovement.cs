@@ -14,38 +14,40 @@ public class CameraMovement : MonoBehaviour
     private void LateUpdate()
     {
         Vector3 delta = Vector3.zero;
-
-        float dx = LookAt.position.x - transform.position.x;
-        if( dx> boundX || dx < -boundX)
+        if (LookAt != null)
         {
-            if (transform.position.x < LookAt.position.x)
+            float dx = LookAt.position.x - transform.position.x;
+            if (dx > boundX || dx < -boundX)
             {
-                delta.x = dx - boundX;
+                if (transform.position.x < LookAt.position.x)
+                {
+                    delta.x = dx - boundX;
+                }
+
+                else
+                {
+                    delta.x = dx + boundX;
+                }
             }
 
-            else
+            float dy = LookAt.position.y - transform.position.y;
+            if (dy > boundY || dy < -boundY)
             {
-                delta.x = dx + boundX;
+                if (transform.position.y < LookAt.position.y)
+                {
+                    delta.y = dy - boundY;
+                }
+
+                else
+                {
+                    delta.y = dy + boundY;
+                }
             }
+
+            //move camera
+            desiredPosition = transform.position + delta;
+            transform.position = Vector3.Lerp(transform.position, desiredPosition, speed);
         }
-
-        float dy = LookAt.position.y - transform.position.y;
-        if (dy > boundY || dy < -boundY)
-        {
-            if (transform.position.y < LookAt.position.y)
-            {
-                delta.y = dy - boundY;
-            }
-
-            else
-            {
-                delta.y = dy + boundY;
-            }
-        }
-
-        //move camera
-        desiredPosition = transform.position + delta;
-        transform.position = Vector3.Lerp(transform.position, desiredPosition, speed);
 
     }
     

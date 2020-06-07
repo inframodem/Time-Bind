@@ -23,6 +23,7 @@ public class PressurePlateScript : MonoBehaviour
         {
             for (int i = 0; i < doors.Length; i++)
             {
+                GetComponent<AudioSource>().Play();
                 doors[i].SetActive(false);
             }
         }

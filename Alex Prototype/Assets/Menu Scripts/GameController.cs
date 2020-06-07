@@ -7,14 +7,16 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public GameObject DeathDust;
     public enum PlayerType { Player1, Player2}
-    public enum LevelList { Level1,Level2,Level3,Level4,Level5,Level6,Level7,Level8,Level9,Level10,Level11,Level12,Level13}
+    public enum LevelList { Level1,Level2,Level3,Level4,Level5,Level6,Level7,Level8,Level9,Level10,Level11,Level12}
     public int levelLength;
     public LevelList currLevel;
     public PlayerType playerType;
     public string key;
     public int health = 5;
     public int maxHealth = 5;
+    public bool isDead;
     void Awake()
     {
         //don't destroy on load
@@ -29,7 +31,17 @@ public class GameController : MonoBehaviour
     }
     void Update()
     {
-        
+        if (isDead)
+        {
+            if (!GetComponent<AudioSource>().isPlaying)
+            {
+                health = maxHealth;
+                isDead = false;
+                Scene currscene = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(currscene.name);
+
+            }
+        }
     }
     // Start is called before the first frame update
     //when starting the game
@@ -94,18 +106,19 @@ public class GameController : MonoBehaviour
         string Levelname = currLevel.ToString();
         RestClient.Put("https://time-bind.firebaseio.com/TimeBind/" + key + "/" + Levelname + "/" + "Player" + who + ".json", temp);
         GameObject player = GameObject.Find("Player");
+        Instantiate(DeathDust,player.transform.position, player.transform.rotation);
         Destroy(player);
-        health = maxHealth;
-        Scene currscene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currscene.name);
+        GetComponent<AudioSource>().Play();
+        isDead = true;
 
     }
     public void DeathTrigger()
     {
         GameObject player = GameObject.Find("Player");
+        Instantiate(DeathDust, player.transform.position, player.transform.rotation);
         Destroy(player);
-        Scene currscene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currscene.name);
+        GetComponent<AudioSource>().Play();
+        isDead = true;
 
     }
 

@@ -7,6 +7,7 @@ public class CodeDoor : MonoBehaviour
     // Start is called before the first frame update
     public string doorCode;
     public GameObject padGui;
+    public bool open = false;
     void Start()
     {
         
@@ -15,14 +16,16 @@ public class CodeDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (open && !GetComponent<AudioSource>().isPlaying)
+            Destroy(gameObject);
     }
     public void CheckDoor(string input)
     {
         
         if(input == doorCode)
         {
-            Destroy(gameObject);
+            GetComponent<AudioSource>().Play();
+            open = true;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
