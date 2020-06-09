@@ -39,7 +39,7 @@ public class Console : MonoBehaviour
                     int i;
                     if (Int32.TryParse(words[1], out i))
                     {
-                        if(i < gc.levelLength)
+                        if(i <= gc.levelLength)
                         gc.LoadNewLevel(i);
                     }
                     break;

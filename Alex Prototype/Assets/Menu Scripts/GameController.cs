@@ -17,6 +17,8 @@ public class GameController : MonoBehaviour
     public int health = 5;
     public int maxHealth = 5;
     public bool isDead;
+    public float healthcooldown = 8f;
+    public float healthcooldownmax = 8f;
     void Awake()
     {
         //don't destroy on load
@@ -42,6 +44,19 @@ public class GameController : MonoBehaviour
 
             }
         }
+        else
+        {
+            healthcooldown -= Time.deltaTime;
+            if(healthcooldown <= 0f)
+            {
+                if(health < maxHealth)
+                {
+                    UpdateHealth(1);
+                }
+                healthcooldown = healthcooldownmax;
+            }
+        }
+
     }
     // Start is called before the first frame update
     //when starting the game
@@ -72,6 +87,7 @@ public class GameController : MonoBehaviour
         currLevel++;
         if ((int)currLevel < levelLength)
         {
+            UpdateHealth(maxHealth - health);
             SceneManager.LoadScene(playerType.ToString() + currLevel.ToString());
         }
     }
@@ -124,10 +140,22 @@ public class GameController : MonoBehaviour
 
     public void LoadNewLevel(int i)
     {
-        currLevel = (LevelList)i - 1;
+        currLevel = (LevelList)(i - 1);
         if ((int)currLevel < levelLength)
         {
+            if (health < maxHealth)
+            {
+                UpdateHealth(maxHealth - health);
+            }
             SceneManager.LoadScene(playerType.ToString() + currLevel.ToString());
         }
+    }
+
+    public void returntomainmenu()
+    {
+        currLevel = LevelList.Level1;
+        maxHealth = 5;
+        health = maxHealth;
+        SceneManager.LoadScene("Menu");
     }
 }

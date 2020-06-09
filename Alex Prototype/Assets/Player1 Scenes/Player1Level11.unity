@@ -94391,7 +94391,7 @@ MonoBehaviour:
   - {fileID: 694402189}
   rb: {fileID: 1124342068}
   currnodedir: {x: 0, y: 0, z: 0}
-  speed: 20
+  speed: 5
   currnode: 0
 --- !u!199 &1124342070
 ParticleSystemRenderer:
@@ -99114,7 +99114,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 19e7942c33519fb40be7a02d7c34adeb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121121,7 +121121,7 @@ MonoBehaviour:
   - {fileID: 1172898930}
   rb: {fileID: 1573415795}
   currnodedir: {x: 0, y: 0, z: 0}
-  speed: 20
+  speed: 5
   currnode: 0
 --- !u!199 &1573415797
 ParticleSystemRenderer:
@@ -125844,7 +125844,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 19e7942c33519fb40be7a02d7c34adeb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

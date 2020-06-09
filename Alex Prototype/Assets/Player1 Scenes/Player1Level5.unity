@@ -9621,7 +9621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogScreens:
-  - Seems like their is a key hidden behind the painting
+  - Seems like their is a key hidden under this crate.
   prompt: {fileID: 1868813768}
   dialogBox: {fileID: 1545968572}
   dialogText: {fileID: 895581862}
