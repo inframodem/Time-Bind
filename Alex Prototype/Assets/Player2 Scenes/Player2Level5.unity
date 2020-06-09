@@ -20058,7 +20058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lc: {fileID: 1999611687}
-  item: 34
+  item: 4
   open: 0
 --- !u!50 &1817535285
 Rigidbody2D:

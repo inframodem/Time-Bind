@@ -214,7 +214,6 @@ public class LevelController : MonoBehaviour
     }
     public virtual void SendCrates(int portal,int cratetype)
     {
-        playerWin[(int)gc.playerType] = true;
         LevelData send = new LevelData();
         send.setItem(0, 1);
         send.setItem(portal + 3, cratetype);
