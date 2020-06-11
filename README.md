@@ -6,3 +6,6 @@ Version:
 
 Alpha Build:
 https://inframodem.github.io/Digital-Build-Time-Bind/
+
+Final Build:
+https://simmer.io/@inframodem/time-bind
