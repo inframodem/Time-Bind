@@ -9621,7 +9621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogScreens:
-  - Seems like their is a key hidden under this crate.
+  - Seems like there is a key hidden under this crate.
   prompt: {fileID: 1868813768}
   dialogBox: {fileID: 1545968572}
   dialogText: {fileID: 895581862}
@@ -15351,8 +15351,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -90.479996, y: 15.1}
-  m_SizeDelta: {x: 169.9, y: 30.2}
+  m_AnchoredPosition: {x: -110.8, y: 15.1}
+  m_SizeDelta: {x: 210.6, y: 30.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1428272601
 MonoBehaviour:
@@ -19321,6 +19321,7 @@ GameObject:
   - component: {fileID: 1729911557}
   - component: {fileID: 1729911556}
   - component: {fileID: 1729911555}
+  - component: {fileID: 1729911559}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -19408,6 +19409,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1729911559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729911554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 24
+  m_RefResolutionX: 320
+  m_RefResolutionY: 180
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &1779181687
 GameObject:
   m_ObjectHideFlags: 0
@@ -19828,7 +19849,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868813768}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09, y: 0.54, z: -1.1953125}
+  m_LocalPosition: {x: 0.09, y: 1, z: -1.1953125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1113966097}
@@ -19902,7 +19923,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16

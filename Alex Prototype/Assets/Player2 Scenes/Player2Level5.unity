@@ -1827,7 +1827,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -7484,6 +7484,7 @@ GameObject:
   - component: {fileID: 485330994}
   - component: {fileID: 485330993}
   - component: {fileID: 485330996}
+  - component: {fileID: 485330997}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7571,6 +7572,26 @@ MonoBehaviour:
   boundX: 2
   boundY: 1.5
   speed: 0.15
+--- !u!114 &485330997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485330992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 24
+  m_RefResolutionX: 320
+  m_RefResolutionY: 180
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &521580809
 GameObject:
   m_ObjectHideFlags: 0
@@ -8836,8 +8857,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -90.479996, y: 20}
-  m_SizeDelta: {x: 169.9, y: 40}
+  m_AnchoredPosition: {x: -133.85, y: 20}
+  m_SizeDelta: {x: 256.64, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &989631194
 MonoBehaviour:

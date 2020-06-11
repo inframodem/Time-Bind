@@ -46,7 +46,8 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            healthcooldown -= Time.deltaTime;
+            if(health < maxHealth)
+                healthcooldown -= Time.deltaTime;
             if(healthcooldown <= 0f)
             {
                 if(health < maxHealth)

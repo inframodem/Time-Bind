@@ -8886,6 +8886,7 @@ GameObject:
   - component: {fileID: 598307362}
   - component: {fileID: 598307361}
   - component: {fileID: 598307360}
+  - component: {fileID: 598307364}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -8973,6 +8974,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &598307364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598307359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 24
+  m_RefResolutionX: 320
+  m_RefResolutionY: 180
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &601637944
 GameObject:
   m_ObjectHideFlags: 0
@@ -11360,7 +11381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogScreens:
-  - Seems like their is a key hidden behind the painting, their's probably another
+  - Seems like there is a key hidden behind the painting, their's probably another
     key here in the past too.
   prompt: {fileID: 2005984523}
   dialogBox: {fileID: 2094064995}
@@ -13267,6 +13288,42 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 21, y: 16, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 22, y: 16, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 23, y: 16, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 24, y: 16, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 25, y: 16, z: 0}
     second:
       m_TileIndex: 0
@@ -15116,8 +15173,8 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 305
     m_Data: {fileID: 11400000, guid: d221d08fa7361fb4f8ff53734976f17e, type: 2}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 4
+    m_Data: {fileID: 11400000, guid: a3e10db4abf8ec94cb55f9fe4637e961, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: d1aec3559ace4de41b45abb6e2d064dc, type: 2}
   - m_RefCount: 54
@@ -15125,14 +15182,14 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 305
     m_Data: {fileID: 21300046, guid: 3951ebf9518d5a84c8164fc69cdfd9b1, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 4
+    m_Data: {fileID: 21300102, guid: 3951ebf9518d5a84c8164fc69cdfd9b1, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 21300090, guid: 3951ebf9518d5a84c8164fc69cdfd9b1, type: 3}
   - m_RefCount: 54
     m_Data: {fileID: 21300076, guid: 3951ebf9518d5a84c8164fc69cdfd9b1, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 362
+  - m_RefCount: 366
     m_Data:
       e00: 1
       e01: 0
@@ -15151,7 +15208,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 362
+  - m_RefCount: 366
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -17001,8 +17058,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -90.479996, y: 17.2}
-  m_SizeDelta: {x: 169.9, y: 34.4}
+  m_AnchoredPosition: {x: -112.29, y: 17.2}
+  m_SizeDelta: {x: 213.52, y: 34.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1467248518
 MonoBehaviour:
@@ -17075,7 +17132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogScreens:
-  - Hold Space to move around crates
+  - Hold Space to move around crates and place it on the button
   prompt: {fileID: 1801675432}
   dialogBox: {fileID: 2094064995}
   dialogText: {fileID: 488701378}
@@ -19521,7 +19578,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 1b701d0a801df3e4bb6a135c83853a94, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -19539,7 +19596,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005984523}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09, y: 0.54, z: -1.1953125}
+  m_LocalPosition: {x: 0.09, y: 0.86, z: -1.1953125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 978144966}
